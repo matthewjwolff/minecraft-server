@@ -5,7 +5,7 @@ window.addEventListener('load', (event) => {
 		if(request.readyState == 4 && request.status == 200) {
 			var response = JSON.parse(request.responseText)
 			var element = document.getElementById("statusField")
-			element.innerText = response.online ? "Server is currently UP" : "Server is currently DOWN"
+			element.innerText = response.online ? "Server is currently UP. There are "+response.players.now+" players online." : "Server is currently DOWN"
 		}
 	}
 	request.send()
