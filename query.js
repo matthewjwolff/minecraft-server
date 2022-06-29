@@ -1,6 +1,6 @@
 window.addEventListener('load', (event) => {
 	var request = new XMLHttpRequest()
-	request.open("GET", "https://mcapi.us/server/status?ip=modded.wolff.io")
+	request.open("GET", "https://mcapi.us/server/status?ip=minecraft.wolff.io")
 	request.onreadystatechange = () => {
 		if(request.readyState == 4 && request.status == 200) {
 			var response = JSON.parse(request.responseText)
